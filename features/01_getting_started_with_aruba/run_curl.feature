@@ -23,7 +23,7 @@ Feature: Run commands with Aruba
         response = Net::HTTP.get_response(uri)
 
         puts response.code
-        puts response.body
+        STDOUT.puts response.body
 
         \"\"\"
         When I successfully run `ruby ./cli.rb`
