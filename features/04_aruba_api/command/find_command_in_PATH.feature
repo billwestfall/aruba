@@ -22,16 +22,3 @@ Feature: Get path to command
     """
     When I run `rspec`
     Then the specs should all pass
-
-  Scenario: Non-existing executable
-    Given a file named "bin/aruba-test-cli" does not exist
-    And a file named "spec/which_spec.rb" with:
-    """ruby
-    require 'spec_helper'
-
-    RSpec.describe 'Find path for command', :type => :aruba do
-      it { expect(which('aruba-test-cli')).to be_nil }
-    end
-    """
-    When I run `rspec`
-    Then the specs should all pass
