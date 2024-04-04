@@ -29,7 +29,7 @@ Feature: Run commands with Aruba
         When I successfully run `ruby ./cli.rb`
         Then the output should contain:
         \"\"\"
-        201
+        200
         \"\"\"
     """
     When I successfully run `cucumber`
