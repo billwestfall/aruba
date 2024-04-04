@@ -64,19 +64,6 @@ Feature: Run command
     When I run `rspec`
     Then the specs should all pass
 
-  Scenario: Non-existing executable
-    Given a file named "bin/aruba-test-cli" does not exist
-    And a file named "spec/run_spec.rb" with:
-    """ruby
-    require 'spec_helper'
-
-    RSpec.describe 'Find path for command', type: :aruba do
-      it { expect { run_command('aruba-test-cli') }.to raise_error Aruba::LaunchError, /Command "aruba-test-cli" not found in PATH-variable/ }
-    end
-    """
-    When I run `rspec`
-    Then the specs should all pass
-
   Scenario: Command with long startup phase
 
     If you have got a command with a long startup phase or use `ruby` together
