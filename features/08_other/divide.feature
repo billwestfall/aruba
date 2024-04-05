@@ -12,7 +12,7 @@ Feature: Run commands with Aruba
   Scenario: Ruby Program via "ruby"
     Given a file named "features/hello_aruba.feature" with:
     """
-    Feature: Multiply numbers
+    Feature: Divide numbers
       Scenario: First Run of Command
         Given a file named "cli.rb" with:
         \"\"\"
