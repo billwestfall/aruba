@@ -12,14 +12,14 @@ Feature: Run commands with Aruba
   Scenario: Ruby Program via "ruby"
     Given a file named "features/hello_aruba.feature" with:
     """
-    Feature: Run curl against Wolfram API
+    Feature: Run curl against Wttr API
       Scenario: First Run of Command
         Given a file named "cli.rb" with:
         \"\"\"
         require 'net/http'
         require 'uri'
 
-        uri = URI.parse("https://newton.vercel.app/api/v2/sin/0.5")
+        uri = URI.parse("https://wttr.in/Seattle?format=3")
         response = Net::HTTP.get_response(uri)
 
         puts response.code
@@ -29,7 +29,7 @@ Feature: Run commands with Aruba
         When I successfully run `ruby ./cli.rb`
         Then the output should contain:
         \"\"\"
-        0.479426
+        Seattle
         \"\"\"
     """
     When I successfully run `cucumber`
