@@ -16,7 +16,8 @@ Feature: Run commands with Aruba
       Scenario: First Run of Command
         Given a file named "cli.rb" with:
         \"\"\"
-        5*6
+        a=5*6
+        puts a
         \"\"\"
         When I successfully run `ruby ./cli.rb`
         Then the output should contain:
