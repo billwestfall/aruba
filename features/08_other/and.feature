@@ -16,8 +16,8 @@ Feature: Run commands with Aruba
       Scenario: First Run of Command
         Given a file named "cli.rb" with:
         \"\"\"
-        a == "hello"
-        b == "world"
+        a = "hello"
+        b = "world"
         puts a&&b
         \"\"\"
         When I successfully run `ruby ./cli.rb`
