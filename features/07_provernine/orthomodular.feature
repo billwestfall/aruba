@@ -13,7 +13,7 @@ Feature: Run commands with Aruba
     Given a file named "features/hello_aruba.feature" with:
     """
     Feature: Getting Started With Aruba
-      Scenario: Orthomodular lattice
+      Scenario: First Run of Command
         Given a file named "ba4.in" with:
         \"\"\"
         assign(max_seconds, 120).
