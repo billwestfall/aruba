@@ -23,7 +23,7 @@ q -> -r.	% '-' symbol is for negation, 'not'
 end_of_list.
 
 formulas(goals).
--r | t.		% '|' symbol is for disjunction 'or'
+-r | p.		% '|' symbol is for disjunction 'or'
 end_of_list.
 
         \"\"\"
