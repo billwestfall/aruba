@@ -14,14 +14,38 @@ Feature: Run commands with Aruba
     """
     Feature: Getting Started With Aruba
       Scenario: First Run of Command
-        Given a file named "cli.rb" with:
+        Given a file named "ba3.in" with:
         \"\"\"
-        puts "Hello, Aruba!"
+        assign(max_seconds, 30).
+
+        assign(new_constants, 1).
+
+        assign(max_weight,25).
+
+        % This proves distributivity from a Boolean algebra basis.
+
+        formulas(sos).
+
+        x v (y v z) = y v (x v z).
+        x ^ y = (x' v y')'.
+        x v x' = y v y'.
+        (x v y') ^ (x v y) = x.
+
+        end_of_list.
+
+        set(restrict_denials).
+
+        formulas(goals).
+
+        x ^ (y v z) = (x ^ y) v (x ^ z) # label(distributivity_1).
+
+        end_of_list.
+
         \"\"\"
-        When I successfully run `ruby ./cli.rb`
+        When I successfully run `prover9 -f ./BA3.in`
         Then the output should contain:
         \"\"\"
-        Hello, Aruba!
+        THEOREM PROVED
         \"\"\"
     """
     When I successfully run `cucumber`
