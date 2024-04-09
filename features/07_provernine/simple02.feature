@@ -21,7 +21,7 @@ Feature: Run commands with Aruba
         end_of_list.
 
         formulas(goals).
-        p & q.
+        p | q.
         end_of_list.
 
         \"\"\"
