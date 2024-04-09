@@ -56,7 +56,7 @@ Feature: Run commands with Aruba
 
 
         \"\"\"
-        When I successfully run `prover9 -f ./BA3.in`
+        When I successfully run `prover9 -f ./BA4.in`
         Then the output should contain:
         \"\"\"
         THEOREM PROVED
