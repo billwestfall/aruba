@@ -21,7 +21,7 @@ Feature: Run commands with Aruba
         formulas(assumptions).
 
         exists y (r(y) & b(y)).
-        all z (r(z) -> d(z).
+        all z (r(z) -> d(z)).
 
         end_of_list.
 
