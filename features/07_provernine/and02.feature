@@ -17,13 +17,14 @@ Feature: Run commands with Aruba
         Given a file named "ba4.in" with:
         \"\"\"
         formulas(assumptions).
-        (t & s).
-        s -> u.
-        t -> v.
+        q -> -s.
+        p -> (q ^ r).
+        t -> -r.
+        p.
         end_of_list.
 
         formulas(goals).
-        (v & u).
+        -s & -t.
         end_of_list.
 
         \"\"\"
