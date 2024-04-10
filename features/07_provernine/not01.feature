@@ -22,7 +22,7 @@ Feature: Run commands with Aruba
         end_of_list.
 
         formulas(goals).
-        -s.
+        -s | s.
         end_of_list.
 
         \"\"\"
