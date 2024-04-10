@@ -18,7 +18,7 @@ Feature: Run commands with Aruba
         \"\"\"
         formulas(assumptions).
         q -> -s.
-        p -> (q ^ r).
+        p -> (q & r).
         t -> -r.
         p.
         end_of_list.
