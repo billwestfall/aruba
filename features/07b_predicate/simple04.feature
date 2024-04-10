@@ -20,7 +20,7 @@ Feature: Run commands with Aruba
 
         formulas(assumptions).
 
-        p -> (exists x) a(x).
+        p -> exists x (a(x)).
         
         end_of_list.
 
