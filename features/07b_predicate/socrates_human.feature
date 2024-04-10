@@ -18,7 +18,7 @@ Feature: Run commands with Aruba
         \"\"\"
         assign(max_seconds, 30).
 
-        formulas(sos).
+        formulas(assumptions).
 
         (all h all m (h -> m)).
         s -> h.
