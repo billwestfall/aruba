@@ -26,7 +26,7 @@ Feature: Run commands with Aruba
 
         formulas(goals).
 
-        - exists x (p & -q).
+        exists x (p & -q).
 
         end_of_list.
 
