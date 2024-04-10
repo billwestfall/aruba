@@ -16,33 +16,29 @@ Feature: Run commands with Aruba
       Scenario: First Run of Command
         Given a file named "ba4.in" with:
         \"\"\"
-        assign(iterate_up_to, 12).
+        assign(max_seconds, 30).
 
-set(verbose).
 
-% This list of formulas specifies a noncommutative group.
-%
-% Normally we would write the group axioms with clauses
-% (as in the example ncg-48.in).  Here we use quantified
-% formulas.
+formulas(goals).
 
-formulas(theory).
+% Andrews challenge problem (stated positively).
 
-% Associativity
-
-all x all y all z ((x * y) * z = x * (y * z)).
-
-% There is a left identity element, and every element has a left inverse.
-
-exists e ((all x (e * x = x)) &
-          (all x exists y (y * x = e))).
-
-% So far, we have group theory.  Now, state that
-% there are two noncommuting elements.
-
-% exists a exists b (a * b != b * a).
+(
+   (
+     (exists x all y (p(x) <-> p(y)))
+     <->
+     ((exists u q(u)) <-> (all v p(v)))
+   )
+   <->
+   (
+     (exists w all z (q(z) <-> q(w)))
+     <->
+     ((exists x1 p(x1)) <-> (all x2 q(x2)))
+   )
+).
 
 end_of_list.
+
 
         \"\"\"
         When I successfully run `prover9 -f ./BA4.in`
