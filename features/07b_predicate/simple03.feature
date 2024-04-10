@@ -20,13 +20,13 @@ Feature: Run commands with Aruba
 
         formulas(assumptions).
 
-        exists x (a(x) -> p).
-
+        all x (a(x) -> p).
+        
         end_of_list.
 
         formulas(goals).
 
-        all x (a(x) -> p).
+        exists x (a(x) -> p).
 
         end_of_list.
 
