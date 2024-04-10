@@ -40,7 +40,7 @@ exists e ((all x (e * x = x)) &
 % So far, we have group theory.  Now, state that
 % there are two noncommuting elements.
 
-exists a exists b (a * b != b * a).
+% exists a exists b (a * b != b * a).
 
 end_of_list.
 
