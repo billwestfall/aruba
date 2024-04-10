@@ -20,7 +20,8 @@ Feature: Run commands with Aruba
 
         formulas(assumptions).
 
-        (all h all m (h -> m)).
+        % (all h all m (h -> m)).
+        h -> m.
         s -> h.
 
         end_of_list.
