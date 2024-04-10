@@ -18,11 +18,11 @@ Feature: Run commands with Aruba
         \"\"\"
         formulas(assumptions).
         r -> s.
-        -r.
+        -s.
         end_of_list.
 
         formulas(goals).
-        -s | s.
+        -r.
         end_of_list.
 
         \"\"\"
