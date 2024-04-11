@@ -17,31 +17,23 @@ Feature: Run commands with Aruba
         Given a file named "ba4.in" with:
         \"\"\"
        
-        assign(iterate_up_to, 12).
+        % Noncommutative group of size 48.  This is found in about a second.
+% Size 48 is usually way out of range for MACE4, and I don't know
+% why this one is so fast.  In general, sizes 6 * 2^n are very fast.
+
+assign(domain_size, 48).
+
+clear(negprop).  % This reduces the time from 3 seconds to 1.
 
 set(verbose).
 
-% This list of formulas specifies a noncommutative group.
-%
-% Normally we would write the group axioms with clauses
-% (as in the example ncg-48.in).  Here we use quantified
-% formulas.
+clauses(theory).
 
-formulas(theory).
+e * x = x.
+x' * x = e.
+(x * y) * z = x * (y * z).
 
-% Associativity
-
-all x all y all z ((x * y) * z = x * (y * z)).
-
-% There is a left identity element, and every element has a left inverse.
-
-exists e ((all x (e * x = x)) &
-          (all x exists y (y * x = e))).
-
-% So far, we have group theory.  Now, state that
-% there are two noncommuting elements.
-
-exists a exists b (a * b != b * a).
+A * B != B * A.
 
 end_of_list.
 
