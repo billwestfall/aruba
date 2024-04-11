@@ -29,7 +29,7 @@ end_of_list.
         When I successfully run `mace4 -f ./ba4.in`
         Then the output should contain:
         \"\"\"
-        THEOREM PROVED
+        Model 1
         \"\"\"
     """
     When I successfully run `cucumber`
