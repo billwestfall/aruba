@@ -17,28 +17,16 @@ Feature: Run commands with Aruba
         Given a file named "ba4.in" with:
         \"\"\"
        
-        % Noncommutative group of size 48.  This is found in about a second.
-% Size 48 is usually way out of range for MACE4, and I don't know
-% why this one is so fast.  In general, sizes 6 * 2^n are very fast.
-
-assign(domain_size, 48).
-
-clear(negprop).  % This reduces the time from 3 seconds to 1.
-
-set(verbose).
-
+        assign(iterate_up_to, 10). % search up through order 10
 clauses(theory).
-
-e * x = x.
-x' * x = e.
-(x * y) * z = x * (y * z).
-
-A * B != B * A.
-
+E * x = x. % left identity
+x’ * x = E. % left inverse
+(x * y) * z = x * (y * z). % associativity
+A * B != B * A. % A and B do not commute
 end_of_list.
 
         \"\"\"
-        When I successfully run `mace4 -f ./BA4.in`
+        When I successfully run `mace4 -f ./ba4.in`
         Then the output should contain:
         \"\"\"
         THEOREM PROVED
