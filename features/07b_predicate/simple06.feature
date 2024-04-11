@@ -21,7 +21,7 @@ Feature: Run commands with Aruba
         formulas(assumptions).
 
         p & q.
-        p
+        p.
 
         formulas(goals).
 
