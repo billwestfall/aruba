@@ -18,9 +18,14 @@ Feature: Run commands with Aruba
         \"\"\"
         assign(max_seconds, 30).
 
+        formulas(assumptions).
+
+        p & q.
+        p
+
         formulas(goals).
 
-        Lt(x,y) -> (exists z) (Lt(x,z) & Lt(z,y)).
+        q.
 
         end_of_list.
 
