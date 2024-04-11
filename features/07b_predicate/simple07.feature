@@ -26,7 +26,7 @@ Feature: Run commands with Aruba
         end_of_list.
 
         \"\"\"
-        When I successfully run `prover9 -f ./BA4.in`
+        When I successfully run `mace4 -f ./BA4.in`
         Then the output should contain:
         \"\"\"
         THEOREM PROVED
