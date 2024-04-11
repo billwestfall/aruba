@@ -23,6 +23,8 @@ Feature: Run commands with Aruba
         p -> q.
         p.
 
+        end_of_list.
+
         formulas(goals).
 
         q.
