@@ -20,7 +20,7 @@ Feature: Run commands with Aruba
 
         formulas(goals).
 
-        (all x all y ((x + y) = (y +x)).
+        (all x all y ((x + y) = (y +x))).
 
         end_of_list.
 
