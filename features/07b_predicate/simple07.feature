@@ -17,7 +17,9 @@ Feature: Run commands with Aruba
         Given a file named "ba4.in" with:
         \"\"\"
        
-        set(arithmetic).  % We use this for successor relation.
+        set(arithmetic).
+        
+        formulas(assumptions).
 
         (-14 mod 5) = 1
 
