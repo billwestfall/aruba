@@ -61,7 +61,7 @@ end_of_list.
         When I successfully run `prover9 -f ./ba4.in`
         Then the output should contain:
         \"\"\"
-        Model 1
+        THEOREM PROVED
         \"\"\"
     """
     When I successfully run `cucumber`
