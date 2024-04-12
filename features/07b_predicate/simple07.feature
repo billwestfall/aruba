@@ -43,8 +43,8 @@ y * x != u | z * x != u | y = z # label(right_cancellation_extended).
 % Five examples.
 
 % x * y = y * x # label(commutativity).
-  x * y * z * y * x = y * x * z * x * y # label(nilpotent_class2).
-% x * y * x * y * x * y = x * x * x * y * y * y # label("(xy)^3 = x^3y^3").
+% x * y * z * y * x = y * x * z * x * y # label(nilpotent_class2).
+  x * y * x * y * x * y = x * x * x * y * y * y # label("(xy)^3 = x^3y^3").
 % x * y * x * y * x * y = y * x * y * x * y * x # label("(xy)^3 = (yx)^3").
 % x * f(x,y) * y = y * g(x,y) * x # label(general_case).
 
@@ -56,8 +56,6 @@ b * d0 = a * c0.
 d * d0 != c * c0.
 
 end_of_list.
-
-
 
         \"\"\"
         When I successfully run `prover9 -f ./ba4.in`
